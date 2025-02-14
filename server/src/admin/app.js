@@ -1,4 +1,4 @@
-import logo from "./extensions/DwinaTech.png";
+import logo from "./extensions/DREHENDZ.png";
 
 const config = {
   // Replace the Strapi logo in auth (login) views
@@ -20,7 +20,7 @@ const config = {
 
       "app.components.LeftMenu.navbrand.workplace": "Testing",
 
-      "Auth.form.welcome.title": "Welcom to Dwinatech Store",
+      "Auth.form.welcome.title": "Welcome to Drehendz Store",
 
       "Auth.form.welcome.subtitle": "Login to your account",
 

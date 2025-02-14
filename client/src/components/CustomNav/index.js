@@ -13,7 +13,9 @@ import {
   DropdownItem,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import { FaShoppingBasket } from "react-icons/fa";
+import { BsCart2 } from "react-icons/bs";
+
+
 const CustomNav = ({ basketItems, isLoggedIn, username }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +25,7 @@ const CustomNav = ({ basketItems, isLoggedIn, username }) => {
       Logout
     </NavLink>
   ) : (
-    <NavLink tag={Link} to="/login">
+    <NavLink tag={Link} to="/login" fontFamily="Tropical Orange" >
       Login
     </NavLink>
   );
@@ -31,8 +33,8 @@ const CustomNav = ({ basketItems, isLoggedIn, username }) => {
   return (
     <div className="custom-nav">
       <Navbar color="light" light expand="md" container>
-        <NavbarBrand tag={Link} to="/" className="mr-auto">
-          Stapi E-commerce
+        <NavbarBrand tag={Link} to="/" className="mr-auto" fontFamily="Tropical Orange"  >
+          <img src="/client/public/DREHENDZ.svg" alt="drehendz" />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} className="mr-2" />
         <Collapse isOpen={isOpen} navbar>
@@ -66,7 +68,7 @@ const CustomNav = ({ basketItems, isLoggedIn, username }) => {
             <NavItem>
               <NavLink tag={Link} to="/basket" className="basket-icon-wrapper">
                 <span className="basket-items">{basketItems}</span>
-                <FaShoppingBasket className="basket-icon" />
+                < BsCart2 className="basket-icon" />
               </NavLink>
             </NavItem>
           </Nav>

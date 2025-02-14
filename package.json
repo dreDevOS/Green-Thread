@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@strapi/strapi": "^5.9.0",
     "express": "^4.19.2",
     "path": "^0.12.7"
   }

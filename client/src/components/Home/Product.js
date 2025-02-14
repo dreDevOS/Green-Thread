@@ -38,7 +38,7 @@ const Product = ({ product, orderCard }) => {
         ) : null}
         <CardSubtitle>
           <strong>
-            Price: £{orderCard ? product.price : product.attributes.price}
+            Price: ${orderCard ? product.price : product.attributes.price}
           </strong>
         </CardSubtitle>
       </CardBody>

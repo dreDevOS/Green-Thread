@@ -20,7 +20,7 @@ export const useProducts = () => {
     try {
       const {
         data: { data },
-      } = await axios.get("http://localhost:1337/api/products?populate=*");
+      } = await axios.get("http://localhost:1337/admin/api/products?populate=*");
       setProducts(data);
     } catch (error) {
       console.log({ error });
