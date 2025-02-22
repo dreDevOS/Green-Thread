@@ -5,8 +5,10 @@ import { useProducts } from "./useProducts";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const { categories, products } = useProducts();
-  const navigate = useNavigate();
+ const { categories, products } = useProducts();
+ const navigate = useNavigate();
+
+  
 
   const navigateToProductView = (url) => {
     navigate(url);
@@ -15,15 +17,16 @@ const Home = () => {
     <div>
       <div className="home">
         <h2 style={{ textAlign: "center" }}>Enjoy our sales!</h2>
+       
         {categories.length
           ? categories.map((category) => {
               const hasProducts = products.filter(
                 (product) =>
-                  product.attributes.category.data?.id === category?.id
+                  product.category.id === category.id
               );
               return hasProducts && hasProducts.length ? (
                 <div key={category.id}>
-                  <h2 className="category-title">{category.attributes.name}</h2>
+                  <h2 className="category-title">{category.name}</h2>
                   <Row key={category.id} className="category">
                     {hasProducts.map((product) => (
                       <Col

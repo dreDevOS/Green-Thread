@@ -43,7 +43,7 @@ const CustomNav = ({ basketItems, isLoggedIn, username }) => {
               {isLoggedIn ? (
                 <>
                   <DropdownToggle nav caret>
-                    {username} account
+                    {username} 
                   </DropdownToggle>
                   <DropdownMenu end>
                     <DropdownItem>Your account</DropdownItem>
